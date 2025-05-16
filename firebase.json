@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "runtime": "nodejs22"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "/api/get-recipes",
+        "function": "gptfree"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
