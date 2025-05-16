@@ -3,7 +3,7 @@ document.getElementById("generate").addEventListener("click", async () => {
   const ingredients = document.getElementById("ingredients").value;
   if (!ingredients) return alert("재료를 입력해주세요!");
 
-  const res = await fetch("/api/get-recipes", {
+  const res = await fetch("https://us-central1-testapp-40923.cloudfunctions.net/gptfree", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ingredients }),
