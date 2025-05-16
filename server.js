@@ -1,3 +1,9 @@
+const res = await fetch("https://us-central1-testapp-40923.cloudfunctions.net/gptfree", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ ingredients }),
+});
+
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
